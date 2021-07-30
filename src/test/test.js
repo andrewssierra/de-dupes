@@ -7,13 +7,13 @@ const {
   INCORRECT_FORMAT,
 } = require('../error');
 
-const TEST_FILE = './test/leads.json';
-const WRONG_TEST_FILE = './test/test123';
-const EMPTY_FILE = './test/empty.json';
-const INCORRECT_FORMAT_FILE = './test/incorrectFormat.json';
-const MISSING_LEADS_FILE = './test/missingLeads.json';
-const SAME_DATE_FILE = './test/sameDate.json';
-const DIFFERENT_DATE_FILE = './test/differentDate.json';
+const TEST_FILE = './test/testData/leads.json';
+const WRONG_TEST_FILE = './test/testData/test123';
+const EMPTY_FILE = './test/testData/empty.json';
+const INCORRECT_FORMAT_FILE = './test/testData/incorrectFormat.json';
+const MISSING_LEADS_FILE = './test/testData/missingLeads.json';
+const SAME_DATE_FILE = './test/testData/sameDate.json';
+const DIFFERENT_DATE_FILE = './test/testData/differentDate.json';
 
 const TEST_NAME = 'John';
 
