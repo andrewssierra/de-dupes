@@ -11,6 +11,7 @@ fs = require('fs');
 const path = require('path');
 const RESULTS_FOLDER = 'results';
 const RESULTS_LOG_FILE = 'results/resultsLog.txt';
+const RESULTS_FILE = 'results/results.json';
 
 function getJSON(file) {
   return new Promise((resolve, reject) => {
@@ -36,6 +37,8 @@ function parseData(data) {
 }
 
 function logMerge(from, to) {
+  delete from.order;
+  delete to.order;
   let logMessage = `Record: \n${JSON.stringify(from, null, 2)} \n`;
   logMessage += `Changed to: \n ${JSON.stringify(to, null, 2)} \n`;
 
@@ -64,7 +67,7 @@ function writeFile(data, file, options) {
 
 function removeLogsFile() {
   return fs.unlink(RESULTS_LOG_FILE, (err) => {
-    if (err) {
+    if (err && err.code != 'ENOENT') {
       return errorMessage(CANNOT_REMOVE_RESULTS_LOG);
     }
   });
@@ -83,3 +86,4 @@ exports.createResultsFolder = createResultsFolder;
 exports.getJSON = getJSON;
 exports.writeFile = writeFile;
 exports.removeLogsFile = removeLogsFile;
+exports.RESULTS_FILE = RESULTS_FILE;

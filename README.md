@@ -4,7 +4,19 @@ de-dupes is a Node.js application that deduplicates JSON data.
 
 ## Installation
 
-Use the [yarn](https://yarnpkg.com/) installer to install dependencies.
+Prior to running the de-dupes application install the following
+
+- [Node](https://nodejs.org/en/download/)
+- [Yarn](https://yarnpkg.com/)
+- [Visual Studio Code](https://code.visualstudio.com/download) (optional IDE)
+
+Change into src directory
+
+```bash
+cd src
+```
+
+Use [yarn](https://yarnpkg.com/) to install dependencies
 
 ```bash
 yarn install
@@ -12,19 +24,24 @@ yarn install
 
 ## Usage
 
-To start application provide file name as a command line argument.
+To start application provide file name as a command line argument
 
 ```bash
-yarn run start ./TEST_FILE.json
+yarn run start PATH_TO_YOUR_JSON_FILE
 ```
 
-To run unit tests run yarn run test
+To run unit tests
 
 ```powershell
 yarn run test
 ```
 
-de-dupes will create a results directory containing the deduplicated output data in results.json and the program logs in resultsLog.txt.
+## Result Data
+
+de-dupes will create a results directory in src
+
+- Deduplicated output data will be in **src/results/results.json**
+- Program logs in **src/results/resultsLog.txt**
 
 ## Dependencies
 
