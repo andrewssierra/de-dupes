@@ -1,0 +1,16 @@
+{
+  "name": "de-dupes",
+  "version": "1.0.0",
+  "dependencies": {
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "scripts": {
+    "test": "jest test/test.js",
+    "start": "node index.js"
+  },
+  "author": "Sierra Andrews",
+  "license": "UNLICENSED"
+}
