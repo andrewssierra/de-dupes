@@ -59,7 +59,7 @@ function logMerge(from, to) {
 
 function writeFile(data, file, options) {
   return fs.writeFile(path.join(__dirname, file), data, options, (err) => {
-    if (err) {
+    if (err && err.code != 'ENOENT') {
       return errorMessage(CANNOT_CREATE_RESULTS_FILE);
     }
   });
